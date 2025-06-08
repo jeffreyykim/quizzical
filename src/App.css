@@ -11,8 +11,9 @@
   justify-content: center;
   gap: 20px;
   background-image:
-    url('./src/assets/yellowblob.png'),
-    url('./src/assets/blueblob.png');
+    url('/quizzical/images/yellowblob.png'),
+    url('/quizzical/images/blueblob.png');
+
   background-repeat: no-repeat, no-repeat;
   background-position: top right, bottom left;
   background-size: 40%, 40%;
@@ -57,8 +58,8 @@
   justify-content: center;
   gap: 20px;
   background-image:
-    url('./src/assets/yellowblob.png'),
-    url('./src/assets/blueblob.png');
+    url('/quizzical/images/yellowblob.png'),
+    url('/quizzical/images/blueblob.png');
   background-repeat: no-repeat, no-repeat;
   background-blend-mode: multiply;
   background-position: top right, bottom left;
@@ -73,8 +74,8 @@
   justify-content: center;
   gap: 20px;
   background-image:
-    url('./src/assets/yellowblob.png'),
-    url('./src/assets/blueblob.png');
+    url('/quizzical/images/yellowblob.png'),
+    url('/quizzical/images/blueblob.png');
   background-repeat: no-repeat, no-repeat;
   background-position: top right, bottom left;
   background-size: 20%, 20%;
