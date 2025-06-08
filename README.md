@@ -26,4 +26,6 @@ This project reinforced concepts which were not practiced during past courses:
 
 - Brushed up on Git basics
 
+- ** Need to commit more often. 
+
 
