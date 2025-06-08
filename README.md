@@ -26,6 +26,8 @@ This project reinforced concepts which were not practiced during past courses:
 
 - Brushed up on Git basics
 
-- ** Need to commit more often. 
+- **API Integration — Used `fetch()` to pull quiz questions from an external API and handled loading/error states
+
+- **Need to commit more often. 
 
 
