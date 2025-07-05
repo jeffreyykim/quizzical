@@ -1,4 +1,12 @@
-function StartScreen({ onStart }) {
+import { useNavigate } from 'react-router-dom'
+
+function StartScreen() {
+  const navigate = useNavigate()
+
+  const handleStart = () => {
+    navigate('/quiz')
+  }
+
   return (
     <div className="start">
       <h1>Quizzical</h1>
@@ -6,7 +14,7 @@ function StartScreen({ onStart }) {
         A fun and interactive quiz app that challenges your knowledge across
         various topics with timed questions and instant feedback.
       </p>
-      <button onClick={onStart}>Start Quiz</button>
+      <button onClick={handleStart}>Start Quiz</button>
     </div>
   )
 }

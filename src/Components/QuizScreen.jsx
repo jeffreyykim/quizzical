@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function QuizScreen() {
+    const navigate = useNavigate();
     const [questions, setQuestions] = useState([]);
     const [loading, setLoading] = useState(true);
     const [selectedAnswers, setSelectedAnswers] = useState({});
@@ -50,38 +52,16 @@ function QuizScreen() {
     };
 
     const handlePlayAgain = () => {
-        setQuestions([]);
-        setSelectedAnswers({});
-        setShowResults(false);
-        setScore(0);
-        setLoading(true);
-        const fetchQuestions = async () => {
-            try {
-                const response = await fetch('https://opentdb.com/api.php?amount=5&difficulty=medium&type=multiple');
-                const data = await response.json();
-
-                const formattedQuestions = data.results.map((question) => {
-                    const allAnswers = [...question.incorrect_answers, question.correct_answer];
-                    return {
-                        ...question,
-                        answers: allAnswers.sort(() => Math.random() - 0.5),
-                    };
-                });
-
-                setQuestions(formattedQuestions);
-                setLoading(false);
-            } catch (error) {
-                console.error('Error fetching questions:', error);
-            }
-        };
-
-        fetchQuestions();
+        navigate('/');
     };
 
     return (
         <div className="quiz">
             {loading ? (
-                <p>Loading questions...</p>
+                <div className="loading-container">
+                    <h2>Loading your quiz...</h2>
+                    <div className="loading-spinner"></div>
+                </div>
             ) : (
                 <>
                     <ul>

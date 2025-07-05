@@ -1,21 +1,16 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import StartScreen from './Components/StartScreen'
 import QuizScreen from './Components/QuizScreen'
 
 function App() {
-  const [startScreen, setStartScreen] = useState(true)
-
-  const handleStart = () => {
-    setStartScreen(false)
-  }
-
   return (
-    <div>
-      {startScreen && <StartScreen onStart={handleStart} />}
-      {!startScreen && <QuizScreen />}
-    </div>
-    
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<StartScreen />} />
+        <Route path="/quiz" element={<QuizScreen />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
