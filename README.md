@@ -1,5 +1,5 @@
 # Quiz App
-
+Live Preview: https://quizzical-jeffreyykim.netlify.app/
 A simple and interactive quiz application built using React. This project showcases what I’ve learned about React components, state management, user input handling, and conditional rendering.
 
 
